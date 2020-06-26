@@ -1,0 +1,22 @@
+<div class="content">
+	<section>
+		{{ content }}
+	</section>
+	<aside>
+		<h2>Opérations</h2>
+		{{ edition }}
+		<br/>
+	</aside>
+	<input type="submit" name="logout" id="" onclick="logout()" value="Se déconnecter">
+</div>
+
+
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+  	tinymce.init({ selector:'textarea' });
+  	function logout(){
+  		const path = window.location.pathname.split("/admin")[0];
+  		console.log(path)
+  		window.location = path +"/admin/deconnexion";
+  	}
+  </script>
