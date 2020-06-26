@@ -1,0 +1,25 @@
+<section>
+	<h2>Modifier/Supprimer un épisode</h2>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Titre</th>
+			<th>Date</th>
+			<th>Modifier</th>
+			<th>Supprimer</th>
+		</tr>
+		<tr>
+			<td>{{ id }}</td>
+			<td><a href="">{{ title }}</a></td>
+			<td>{{ date }}</td>
+			<td><a href="{{ episode_slug }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+			<td>
+				<form action="" method="POST">
+					<input type="submit" name="deleteEpisode" value="Supprimer">
+					<input type="hidden" name="id" value="{{ id }}">
+					<i class="fa fa-trash" aria-hidden="true"></i>
+				</form>
+			</td>
+		</tr>
+	</table>
+</section>

@@ -1,0 +1,22 @@
+<form method = "POST">
+	<input type="text" name="commentAuthor" id="commentAuthor" placeholder="Author" value="">
+	<br/>
+	<textarea type="text" name="comment" id="" cols=50 rows=5 placeholder="Postez votre commentaire"></textarea>
+	<br/>
+	<input type="submit" name="EnvoyerCommentaire" id="boutonEnvoi">
+
+	<input type="hidden" value="{{ idPost }}" name="id">
+</form>
+
+
+<script type="text/javascript">
+	const nom = localStorage.getItem("nom");
+	console.log(nom);
+	if(nom !== null) document.getElementById("commentAuthor").value=nom;
+
+	document.getElementById("boutonEnvoi").onchange = function(){
+		localStorage.setItem("nom", document.getElementById("commentAuthor").value);
+	}
+
+	
+</script>
