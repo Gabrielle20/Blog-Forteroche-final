@@ -1,0 +1,10 @@
+<article>
+	<h5>{{ author }}</h5>
+	<p class="date">{{ date }}</p>
+	<p>{{ comment }}</p>
+	<form method="POST">
+		<input type="submit" name="EnvoyerCommentaire" id="signaler" value="Signaler">
+		<input type="hidden" value="{{ id }}" name="id">
+	</form>
+</article>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>{{ title }}</title>
+	<link href="{{ path }}/css/style.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<script>
+		function showHideMenu(target){
+			target = target.getElementsByTagName("ul")[0];
+			let classname = "";
+			if (target.className !== "visible") classname = "visible";
+			target.className = classname;
+		}
+	</script>
+
+
+</head>
+<body>
+
+	<header>
+		<a href="{{ path }}/"><img src="{{ path }}/images/BLOG.png"></a>
+		{{ menu }}
+	</header>
+	
+	
+	{{ content }}
+
+
+</body>
+</html>
